@@ -1,0 +1,25 @@
+//class 3
+#include<iostream>
+using namespace std;
+class A{
+	private:static int x;
+	public:static void setx(int);
+	static int getx();
+};
+ int A::x;
+void A::setx(int n){
+	x=n;//assigning the values of n to x
+}
+int A::getx(){
+	return x;
+}
+
+int main(){
+	A m1;
+	A m2;
+	m1.setx(5);
+	m2.setx(6);
+	cout<<m1.getx()<<"\n"<<m2.getx();
+	
+	return 0;
+}
