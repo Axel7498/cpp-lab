@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class a{
+	private:
+		int a;
+	public:
+		void set(int x){
+			a=x;
+		}
+	friend class b;
+};
+
+class b{
+	public:
+		void fact(a obj1){
+			int a=obj1.a;
+			cout<<a;
+		}
+};
+
+int main(){
+	a obj1;
+	obj1.set(5);
+	b obj2;
+	obj2.fact(obj1);
+	return 0;
+}
