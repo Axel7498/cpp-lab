@@ -1,0 +1,25 @@
+//defining a class in cpp
+#include<iostream>
+using namespace std;
+class A{
+	private: int x;
+	public: void setx(int);
+	int getx();
+};
+
+void A::setx(int n){
+	x=n;//assigning the values of n to x
+}
+int A::getx(){
+	return x;
+}
+
+int main(){
+	int a;
+	cout<<"enter a .";
+	cin>>a;
+	A m;
+	m.setx(a);
+	cout<<m.getx();
+	
+}
