@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class A{
+	private:int x;
+	public:void setx(int);
+	int getx();
+};
+ void A::setx(int n){
+	x=n;//assigning the values of n to x
+}
+int A::getx(){
+	return x;
+}
+
+int main(){
+	static A m1;
+	static A m2;
+	m1.setx(5);
+	m2.setx(6);
+	cout<<m1.getx()<<"\n"<<m2.getx();
+	
+	return 0;
+}
